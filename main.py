@@ -1,12 +1,12 @@
 import numpy as np
 from geneticalgorithm import geneticalgorithm as ga
 
-from ga_definition import Genetic_Algorithm_custom
-from groq_api import get_response_from_groq
-from preprocessing import Text_preprocessor
+from alg.ga_definition import Genetic_Algorithm_custom
+from api.groq_api import get_response_from_groq
+from data.preprocessing import Text_preprocessor
 
 if __name__ == "__main__":
-    with open('sample_article.txt', 'r') as file:
+    with open('data/sample_article.txt', 'r') as file:
         article = file.read()
     tx_preprocessing = Text_preprocessor(article=article)
     tx_preprocessing.create_vocabulary()
